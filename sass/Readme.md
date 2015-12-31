@@ -1,7 +1,7 @@
-# data-generator/sass
+# semblance/sass
 
 This folder contains SASS files of various kinds, organized in sub-folders:
 
-    data-generator/sass/etc
-    data-generator/sass/src
-    data-generator/sass/var
+    semblance/sass/etc
+    semblance/sass/src
+    semblance/sass/var

@@ -1,0 +1,91 @@
+<html>
+    <head>
+        <title>Sencha Fiddle</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
+        <script type="text/javascript" src="http://localhost/601workspace/ext/build/ext-all.js"></script>
+        <script>
+            Ext.onReady(function() {
+                Ext.Loader.setConfig({enabled: true});
+                Ext.Loader.setPath('Semblance', '../src');
+
+                Ext.Boot.loadSync([
+                    "../src/Context.js",
+                    "../src/Parser.js",
+
+                    "../src/generator/Base.js",
+                    "../src/generator/Abbreviation.js",
+                    "../src/generator/Index.js",
+                    "../src/generator/Lorem.js",
+                    "../src/generator/Repeat.js",
+
+                    "../src/generator/random/Array.js",
+                    "../src/generator/random/Boolean.js",
+                    "../src/generator/random/Float.js",
+                    "../src/generator/random/Integer.js",
+                    "../src/generator/random/Item.js",
+                    "../src/generator/random/Magic8Ball.js",
+                    "../src/generator/random/UUID.js",
+
+                    "../src/generator/Company.js",
+
+                    "../src/generator/date/Between.js",
+                    "../src/generator/date/Birthdate.js",
+                    "../src/generator/date/Future.js",
+                    "../src/generator/date/Past.js",
+                    "../src/generator/date/Time.js",
+                    "../src/generator/date/Timezone.js",
+
+                    "../src/generator/finance/creditcard/Type.js",
+                    "../src/generator/finance/creditcard/Code.js",
+                    "../src/generator/finance/creditcard/Number.js",
+                    "../src/generator/finance/Currency.js",
+
+                    "../src/generator/geo/address/Direction.js",
+                    "../src/generator/geo/address/Mailing.js",
+                    "../src/generator/geo/address/Name.js",
+                    "../src/generator/geo/address/Number.js",
+                    "../src/generator/geo/address/Street.js",
+                    "../src/generator/geo/address/Type.js",
+                    "../src/generator/geo/City.js",
+                    "../src/generator/geo/Country.js",
+                    "../src/generator/geo/Latitude.js",
+                    "../src/generator/geo/Longitude.js",
+                    "../src/generator/geo/PostalCode.js",
+                    "../src/generator/geo/State.js",
+
+                    "../src/generator/person/FirstName.js",
+                    "../src/generator/person/Gender.js",
+                    "../src/generator/person/Language.js",
+                    "../src/generator/person/LastName.js",
+                    "../src/generator/person/Race.js",
+                    "../src/generator/person/SSN.js",
+                    "../src/generator/person/Suffix.js",
+                    "../src/generator/person/Title.js",
+
+                    "../src/generator/phone/AreaCode.js",
+                    "../src/generator/phone/Number.js",
+
+                    "../src/generator/web/domain/Extension.js",
+                    "../src/generator/web/domain/Name.js",
+                    "../src/generator/web/domain/Protocol.js",
+                    "../src/generator/web/domain/Url.js",
+                    "../src/generator/web/Color.js",
+                    "../src/generator/web/Email.js",
+                    "../src/generator/web/FileType.js",
+                    "../src/generator/web/IPv4.js",
+                    "../src/generator/web/IPv6.js",
+                    "../src/generator/web/Mac.js",
+                    "../src/generator/web/MimeType.js",
+                    "../src/generator/web/UserAgent.js",
+                    "../src/generator/web/Username.js",
+
+                    "../src/Api.js"
+                ]);
+
+                Ext.require('Semblance.Api')
+            });
+        </script>
+    </head>
+    <body></body>
+</html>

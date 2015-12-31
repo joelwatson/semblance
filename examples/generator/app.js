@@ -10,7 +10,7 @@ Ext.application({
 
     requires: [
         'Generator.view.main.Main',
-        'DataGenerator.Manager'
+        'Semblance.Api'
     ],
 
     // The name of the initial view to create. With the classic toolkit this class

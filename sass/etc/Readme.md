@@ -1,4 +1,4 @@
-# data-generator/sass/etc
+# semblance/sass/etc
 
-This folder contains miscellaneous SASS files. Unlike `"data-generator/sass/etc"`, these files
+This folder contains miscellaneous SASS files. Unlike `"semblance/sass/etc"`, these files
 need to be used explicitly.

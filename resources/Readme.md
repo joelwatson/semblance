@@ -1,3 +1,3 @@
-# data-generator/resources
+# semblance/resources
 
 This folder contains static resources (typically an `"images"` folder as well).

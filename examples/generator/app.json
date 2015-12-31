@@ -68,9 +68,14 @@
      */
     "requires": [
         "font-awesome",
-        "data-generator"
+        "semblance",
+        "locale"
     ],
 
+    "locales": [
+        "en"
+    ],
+    "locale": "en",
     /**
      * Fashion build configuration properties.
      */
@@ -224,6 +229,12 @@
         {
             "path": "app.js",
             "bundle": true
+        }, 
+        {
+            "path": "resources/codemirror/lib/codemirror.js"
+        },
+        {
+            "path": "resources/codemirror/mode/javascript/javascript.js"
         }
     ],
 
@@ -284,6 +295,12 @@
             "path": "${build.out.css.path}",
             "bundle": true,
             "exclude": ["fashion"]
+        },
+        {
+            "path": "resources/codemirror/lib/codemirror.css"
+        },
+        {
+            "path": "resources/codemirror/theme/monokai.css"
         }
     ],
 

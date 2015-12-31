@@ -1,0 +1,36 @@
+{
+    "framework": "jasmine",
+    "libs": [],
+    "coverageFilters": [],
+    "scenarios": [
+        {
+            "libs": [],
+            "coverageFilters": [],
+            "directory": "api",
+            "name": "api",
+            "page": "http://localhost/601workspace/packages/local/semblance/test/index.html"
+        },
+        {
+            "libs": [],
+            "coverageFilters": [],
+            "directory": "context",
+            "name": "context",
+            "page": "http://localhost/601workspace/packages/local/semblance/test/index.html"
+        },
+        {
+            "libs": [],
+            "coverageFilters": [],
+            "directory": "generator",
+            "name": "generator",
+            "page": "http://localhost/601workspace/packages/local/semblance/test/index.html"
+        },        
+        {
+            "libs": [],
+            "coverageFilters": [],
+            "directory": "parser",
+            "name": "parser",
+            "page": "http://localhost/601workspace/packages/local/semblance/test/index.html"
+        }
+    ],
+    "subjectUrl": "http://localhost/601workspace/packages/local/semblance/test/index.html"
+}
