@@ -234,3 +234,5 @@ Here are the currently-implemented generators. See one that's missing? Please su
  * count: The number of elements to return
  * type: The type of lorem ipsum to return (word, paragraph, sentence)
 
+## Localization
+Customizing generator output per locale is very easy. For an example of a locale override file, see **locale/en/semblance-en.js** which is included with Semblance.
