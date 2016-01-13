@@ -105,6 +105,9 @@ Aliases should be unique and should be in the following form:
 If you have generators that can be "packaged" in a category, you should provide that category as a part of the alias name:
 
     alias: 'semblance.tech.smartphone'
+
+### data()
+Your custom generator will need to implement a data() method which should ultimately return the generated value. This method may support any number of arguments.
     
 ### Context
 It's typically not needed, but in some cases you may wish to access the current context of the generator in order to access data from other generators. You can access the context via the **getContext()** method which will return the context instance to which your generator instance belongs.
