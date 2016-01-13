@@ -1,8 +1,8 @@
 Ext.define('Semblance.generator.random.UUID', {
-	extend: 'Semblance.generator.Base',
-	alias: 'semblance.random.uuid',
-	data: function () {
-		var pattern = 'xxxxxxxx-xxxx-4xxx-Rxxx-xMxxxxxxxxxx'.split(''),
+    extend: 'Semblance.generator.Base',
+    alias: 'semblance.random.uuid',
+    data: function () {
+        var pattern = 'xxxxxxxx-xxxx-4xxx-Rxxx-xMxxxxxxxxxx'.split(''),
             hex = '0123456789abcdef'.split(''),
             length = pattern.length,
             parts = [],
@@ -21,5 +21,5 @@ Ext.define('Semblance.generator.random.UUID', {
         }
 
         return parts.join('');
-	}
+    }
 });

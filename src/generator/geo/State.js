@@ -1,7 +1,7 @@
 Ext.define('Semblance.generator.geo.State', {
-	extend: 'Semblance.generator.Abbreviation',
-	alias: 'semblance.geo.state',
-	items: [{
+    extend: 'Semblance.generator.Abbreviation',
+    alias: 'semblance.geo.state',
+    items: [{
         name: "Alabama",
         abbr: "AL"
     }, {
