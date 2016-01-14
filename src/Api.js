@@ -3,6 +3,7 @@ Ext.define('Semblance.Api', {
     requires: [
         'Semblance.Parser',
         'Semblance.Context',
+        'Semblance.Manager',
         'Semblance.generator.*'
     ],
     /**
@@ -100,20 +101,5 @@ Ext.define('Semblance.Api', {
                 }
             }
         }
-    },
-
-    registerGenerators: function() {
-        var me = this, 
-            classes = Ext.ClassManager.getNamesByExpression('semblance.*'),
-            len = classes.length,
-            i, className;
-
-        for(i=0; i<len; i++) {
-            className = classes[i];
-            Ext.ClassManager.onCreated(me.registerGenerator, me, className);
-        }
     }
- }, function () {
-    // Auto register all classes that have the semblance.* alias structure
-    this.registerGenerators();
  });

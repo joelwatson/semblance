@@ -1,5 +1,8 @@
 Ext.define('Semblance.generator.Base', {
-    requires: ['Semblance.Context'],
+    requires: [
+        'Semblance.Context',
+        'Semblance.Manager'
+    ],
     isTemplate: true,
     isTemplatable: true,
     config: {
@@ -106,4 +109,8 @@ Ext.define('Semblance.generator.Base', {
 
         return result;
     }
+}, function() {
+    this.onExtended(function(cls, data) {
+        Semblance.Manager.register(data);
+    });
 });

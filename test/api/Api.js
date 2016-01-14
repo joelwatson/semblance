@@ -19,11 +19,11 @@ describe("Semblance.Api", function() {
     });
     
     describe("initialization", function() {
-        it("should register all loaded generators", function() {
-            // let's call registerGenerators again so Api picks up the new fake class
-            api.registerGenerators();
-            
-            expect(api.foo.bar).not.toBe(null);
+        it("should register all loaded generators", function(done) {
+            setTimeout(function(){
+                expect(api.foo.bar).not.toBe(null);
+                done(); 
+            }, 500);
         });
     });
     
