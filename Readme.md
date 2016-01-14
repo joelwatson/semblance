@@ -2,6 +2,13 @@
 
 Semblance is a data-generation tool designed specifically for Ext JS applications. Whether you need a random hex color, or need to craft a highly-structured array of data objects, Semblance--and its 50+ built-in generators--gives you great flexibility in crafting mock data for your application. Plus, with its simple generator structure, you can easily add in your own generators!
 
+## Using it in your application
+To use Semblance in your application, you can simply add it to the **requires: []** of your app.json:
+
+    requires: ["semblance"]
+
+**Note**: This package includes a simple example application that demonstrates some of the functionality of Semblance (see examples/generator).
+
 ## Two Approaches
 
 Semblance has two main approaches for generating data: the **API**, and the **Parser**.
@@ -227,3 +234,5 @@ Here are the currently-implemented generators. See one that's missing? Please su
  * count: The number of elements to return
  * type: The type of lorem ipsum to return (word, paragraph, sentence)
 
+## Localization
+Customizing generator output per locale is very easy. For an example of a locale override file, see **locale/en/semblance-en.js** which is included with Semblance.
