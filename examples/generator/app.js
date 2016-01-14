@@ -10,6 +10,7 @@ Ext.application({
 
     requires: [
         'Generator.view.main.Main',
+        'Generator.Custom',
         'Semblance.Api'
     ],
 

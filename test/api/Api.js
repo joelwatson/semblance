@@ -20,9 +20,8 @@ describe("Semblance.Api", function() {
     
     describe("initialization", function() {
         it("should register all loaded generators", function() {
-            var classes = Ext.ClassManager.getNamesByExpression('semblance.*');
             // let's call registerGenerators again so Api picks up the new fake class
-            api.registerGenerators(classes);
+            api.registerGenerators();
             
             expect(api.foo.bar).not.toBe(null);
         });

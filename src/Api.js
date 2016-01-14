@@ -68,44 +68,52 @@ Ext.define('Semblance.Api', {
      * @param {String} generator The classname of the generator
      */
     registerGenerator: function (generator) {
-        var generator = Ext.ClassManager.get(generator),
-            alias = generator.prototype.alias[0],
-            parts = alias.split('.'),
-            len = parts.length,
-            root = this,
-            i, part;
+        var generator = Ext.ClassManager.lookupName(generator, true),
+            aliases = generator.prototype.alias,
+            aliasLen = aliases.length,
+            alias, parts, partsLen,
+            i, x, part, root;
+  
+        for (x=0; x<aliasLen; x++) {
+            alias = aliases[x];
+            parts = alias.split('.');
+            partsLen = parts.length;
+            root = this;
 
-        for (i=1; i<len; i++) {
-            part = parts[i];
-            if (!root.hasOwnProperty(part)) {
-                // add object
-                if (i<len-1) {
-                    root = root[part] = {};
+            for (i=1; i<partsLen; i++) {
+                part = parts[i];
+
+                if (!root.hasOwnProperty(part)) {
+                    // add object
+                    if (i<partsLen-1) {
+                        root = root[part] = {};
+                    }
+                    else {
+                        root[part] = this.fake.bind(this, alias);
+                    }
                 }
                 else {
-                    root[part] = this.fake.bind(this, alias);
-                }
-            }
-            else {
-                root = root[part];
-                if (i===len-1) {
-                    root[part] = this.fake.bind(this, alias);
+                    root = root[part];
+                    if (i===partsLen-1) {
+                        root[part] = this.fake.bind(this, alias);
+                    }
                 }
             }
         }
     },
 
-    /**
-     * Registers generators with the API so a facade method can be bound to fake()
-     * @param {Array} generators
-     */
-    registerGenerators: function (generators) {
-        var i;
-        for (i=0; i<generators.length; i++) {
-            this.registerGenerator(generators[i]);
+    registerGenerators: function() {
+        var me = this, 
+            classes = Ext.ClassManager.getNamesByExpression('semblance.*'),
+            len = classes.length,
+            i, className;
+
+        for(i=0; i<len; i++) {
+            className = classes[i];
+            Ext.ClassManager.onCreated(me.registerGenerator, me, className);
         }
     }
  }, function () {
     // Auto register all classes that have the semblance.* alias structure
-    this.registerGenerators(Ext.ClassManager.getNamesByExpression('semblance.*'));
+    this.registerGenerators();
  });
