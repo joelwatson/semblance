@@ -8,7 +8,8 @@
             "coverageFilters": [],
             "directory": "api",
             "name": "api",
-            "page": ""
+            "page": "",
+            "launch": false
         },
         {
             "libs": [],
@@ -23,7 +24,7 @@
             "directory": "generator",
             "name": "generator",
             "page": ""
-        },        
+        },
         {
             "libs": [],
             "coverageFilters": [],
@@ -32,5 +33,7 @@
             "page": ""
         }
     ],
-    "subjectUrl": "http://localhost/601workspace/packages/local/semblance/test/index.html"
+    "launchAppWatch": true,
+    "subjectUrl": "packages/local/semblance/examples/test",
+    "globals": "test\nSemblance"
 }

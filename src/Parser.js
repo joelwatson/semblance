@@ -82,7 +82,7 @@ Ext.define('Semblance.Parser', {
      * @return {Array/Object/String}
      */
     executeTemplate: function (tpl, context) {
-        var alias = this.parseAlias(tpl);
+        var alias = this.parseAlias(tpl),
             args = this.parseArguments(tpl);
 
         return context.getData(alias, args);
